@@ -1,7 +1,13 @@
 def encrypt(password, shift):
-  # TODO your code goes here
-  # TODO Delete the pass after writing your implementation
-  pass
+  user = password
+  updated = ""
+
+  for i in range(len(user)):
+      curr = user[i]
+      curr = ord(curr) + shift
+      curr = chr(curr)
+      updated += curr
+  return updated
 
 def menu():
   # TODO Print out a menu of options for the user
