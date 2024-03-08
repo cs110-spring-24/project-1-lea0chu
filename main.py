@@ -1,3 +1,11 @@
+def num_input(prompt):
+    while True:
+        user = input(prompt)
+        if user.isdigit() == True:
+            return int(user)
+        else:
+            print("Not a number, try again!")
+
 def encrypt(password, shift):
   user = password
   updated = ""
@@ -10,16 +18,35 @@ def encrypt(password, shift):
   return updated
 
 def menu():
-  # TODO Print out a menu of options for the user
-  # TODO Delete the pass after writing your implementation
-  pass
+   print("Options:\n[1] Add a new note\n[2] Remove notes\n[3] View a note\n[4] List all notes\n[5] Exit the program")
+
 
 def main():
-  stored_username = "john" # fill in your own here
-  stored_password = encrypt("super safe password", 2) # fill in your own super safe password here
+  note = []
+  stored_username = "lea0chu" 
+  stored_password = encrypt("ihatepython", 2) 
+  user = input("Enter your username: ")
+  password = input("Enter your password: ")
+  if user == stored_username and password == stored_password:
+     print("Logged in.")
 
-  # TODO Your implementation goes here
-
+  while True:
+    menu()
+    choice = num_input("Enter your choice: ")
+    if choice == 1:
+      item = input("Enter a new note: ")
+      add(note, item)
+    elif choice == 2:
+      item = input("Enter an item to remove: ")
+      remove(note, item)
+    elif choice == 3:
+      
+    elif choice == 4:
+      print_list(note)
+    elif choice == 5:
+      print("Exiting Program..")
+      return 
+    print()
 
 if __name__ == "__main__":
   # Leave this as is
