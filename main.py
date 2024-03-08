@@ -27,7 +27,7 @@ def main():
   stored_password = encrypt("ihatepython", 2) 
   user = input("Enter your username: ")
   password = input("Enter your password: ")
-  if user == stored_username and password == stored_password:
+  if user == stored_username and encrypt(password, 2) == stored_password:
      print("Logged in.")
 
   while True:
@@ -35,10 +35,10 @@ def main():
     choice = num_input("Enter your choice: ")
     if choice == 1:
       item = input("Enter a new note: ")
-      add(note, item)
+      #add(note, item)
     elif choice == 2:
       item = input("Enter an item to remove: ")
-      remove(note, item)
+     #remove(note, item)
     elif choice == 3:
       print("Viewing a note: {note}")
     elif choice == 4:
