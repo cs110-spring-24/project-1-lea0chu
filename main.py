@@ -40,9 +40,9 @@ def main():
       item = input("Enter an item to remove: ")
       remove(note, item)
     elif choice == 3:
-      
+      print("Viewing a note: {note}")
     elif choice == 4:
-      print_list(note)
+      print("Listing all notes: {print_list(note)}")
     elif choice == 5:
       print("Exiting Program..")
       return 
